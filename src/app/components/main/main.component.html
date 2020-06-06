@@ -1,9 +1,32 @@
-<h1>Mis Grupos Favoritos</h1>
-<p>
-    <a [routerLink]="['/add']">añadir</a>
-    <br>
+<h2 class="cabecera">Mis Grupos Favoritos</h2>
+<hr>
 
-    <a [routerLink]="['/details']">detalle</a>
-    <br>
+<div class="container">
+    <div class="row justify-content-between">
+        <div class="col-4">
+            <button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/add']">Nuevo</button>
+        </div>
+        <div class="col-4">
+            <form class="form-inline ">
+                <input class="form-control form-control-sm" type="text" placeholder="Buscar Grupo">
+                <button class="btn btn-outline-success btn-sm" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div>
 
-</p>
+<br>
+<!-- Cargamos los datos en cards -->
+<div class="card-columns">
+
+    <div class="card" *ngFor=" let grupo of grupoData; let i =index">
+        <div class="embed-responsive embed-responsive-21by9">
+            <img alt="Card image cap" class="card-img-top embed-responsive-item imagen" [src]="grupo.logo" />
+        </div>
+        <div class="card-block">
+            <h4 class="card-title">{{grupo.nombre}}</h4>
+            <button type="button" class="btn btn-outline-success btn-block" (click)=cargaInfo(i)>Saber más</button>
+        </div>
+    </div>
+
+</div>

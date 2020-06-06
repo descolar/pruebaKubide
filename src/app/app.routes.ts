@@ -6,7 +6,7 @@ import { AddGroupComponent } from './components/add-group/add-group.component';
 const APP_ROUTES: Routes = [
 
     {path: 'home', component: MainComponent },
-    {path: 'details', component: InfoGroupComponent },
+    {path: 'details/:index', component: InfoGroupComponent },
     {path: 'add', component: AddGroupComponent },
     {path: '**', pathMatch: 'full', redirectTo: 'home'},
 

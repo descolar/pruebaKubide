@@ -1,5 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 
+body {
+    margin-bottom: 35px;
+}
+
 footer {
     color: steelblue;
     position: fixed;
@@ -7,4 +11,30 @@ footer {
     width: 100%;
     /* text-decoration: none; */
     text-align: center;
+}
+
+.cabecera {
+    text-align: center;
+    color: blue;
+}
+
+.imagen {
+    align-content: center;
+    width: 212;
+    height: 157px;
+    border: 0px;
+    display: block;
+}
+
+.card-text {
+    font-size: 12px;
+}
+
+.card-title {
+    text-align: center;
+    color: steelblue;
+}
+
+.body {
+    bottom: 10px;
 }

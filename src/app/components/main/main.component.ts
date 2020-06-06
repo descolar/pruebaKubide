@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GruposService } from '../../services/grupos.service';
-import { Grupo, GrupoClass } from '../../interfaces/grupo.interface';
+import { Grupo } from '../../interfaces/grupo.interface';
+import { Router } from '@angular/router';
+
+
 
 
 @Component({
@@ -11,10 +14,20 @@ import { Grupo, GrupoClass } from '../../interfaces/grupo.interface';
 })
 export class MainComponent implements OnInit {
 
-  constructor( private _grupoService:GruposService ) { }
+  grupoData: Grupo [];
+  // grupoD: Grupo [];
+
+  constructor( private grupoService: GruposService,
+              private router: Router ) { }
 
   ngOnInit(): void {
 
+    this.grupoData = this.grupoService.getGrupos();
+
+  }
+
+  cargaInfo(index: number){
+    this.router.navigate([`details/${index}`]);
   }
 
 }
