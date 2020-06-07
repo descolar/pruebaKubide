@@ -13,22 +13,37 @@ import { Grupo } from '../../interfaces/grupo.interface';
 
 export class InfoGroupComponent implements OnInit {
 
-  index: number;
-  grupoSelecc: Grupo[];
+  index: number; // Para capturar el indice del grupo
+  grupoSelecc: Grupo; // Para cargar el grupo. Se utiliza en cargaGrupo()
+  d: Grupo[];
+  cancion: string; // Prueba para video.Se utiliza en cargaGrupo()
 
   constructor(  private activatedRouted: ActivatedRoute,
                 private grupoService: GruposService
                 ) {
 
+    // Capturamos el index que mandamos por Router
     this.index = this.activatedRouted.snapshot.params.index;
-    console.log(this.index);
+
    }
 
   ngOnInit(): void {
   this.cargaGrupo();
   }
+
 cargaGrupo(){
-  this.grupoService.getGrupo(this.index);
+
+  // Cargamos el grupo en la variable para utilizarlo en HTML
+  this.grupoSelecc = this.grupoService.getGrupo(this.index);
+  this.cancion = this.grupoSelecc.cancion;
+  console.log(this.cancion);
+
+
+}
+eliminarGrupo(){
+console.log(this.index);
+  this.grupoService.delGrupo(this.index);
+
 }
 
 }

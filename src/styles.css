@@ -26,6 +26,11 @@ footer {
     display: block;
 }
 
+.imagen_info {
+    display: block;
+    margin: auto;
+}
+
 .card-text {
     font-size: 12px;
 }

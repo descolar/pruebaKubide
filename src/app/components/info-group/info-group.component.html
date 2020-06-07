@@ -1,3 +1,27 @@
-<h1>Página de Info del grupo</h1>
+<h2 class="titulo">Más info sobre...</h2>
 <hr>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime delectus architecto repellendus laboriosam ad illo vel excepturi nostrum mollitia aut, deserunt, necessitatibus quisquam, aperiam fuga expedita possimus eveniet atque maiores.</p>
+<div class="row">
+    <div class="col-md-12">
+        <img [src]="grupoSelecc.logo" class="img-fluid imagen_info" alt="Responsive image">
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>{{grupoSelecc.nombre}}</h2>
+        <hr>
+        <p> {{grupoSelecc.info}}</p>
+        <h2 class="cabecera">Comoponentes: {{grupoSelecc.componentes}}</h2>
+    </div>
+</div>
+<!-- <div class="row">
+
+    <div class="embed-responsive embed-responsive-21by9">
+        <iframe class="embed-responsive-item" [src]="cancion" allowfullscreen></iframe>
+    </div>
+
+</div> -->
+<div class="row">
+    <button type="button" class="btn btn-danger btn-block" (click)=eliminarGrupo()>Eliminar</button>
+</div>

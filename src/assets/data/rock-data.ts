@@ -19,20 +19,16 @@ export const rockData: Grupo[] = [
         'La formación se estabilizaría con Mark Evans (bajo) y Phil Rudd (batería).',
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_AcDc.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/gEPmA3USJdI?list=RDgEPmA3USJdI',
         componentes: ' Phil Rudd,  Cliff Williams, Brian Johnson, Angus Young, Malcolm Young'
 
     },
     {
         nombre: 'Queen',
-        info: 'Queen es una banda británica de rock formada en 1970 en Londres por el cantante '+
-       'Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon.' +
-        'Si bien el grupo ha presentado bajas de dos de sus miembros (Mercury, fallecido en 1991, y '+
-       'Deacon, retirado en 1997), los integrantes restantes, May y Taylor, continúan trabajando '+
-        'bajo el nombre Queen, por lo que la banda aún se considera activa.',
+        info: `Queen es una banda británica de rock formada en 1970 en Londres por el cantante Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon.Si bien el grupo ha presentado bajas de dos de sus miembros (Mercury, fallecido en 1991, y Deacon, retirado en 1997), los integrantes restantes, May y Taylor, continúan trabajando bajo el nombre Queen, por lo que la banda aún se considera activa.`,
         img: 'assets/grupo_logDa.png',
         logo: 'assets/img/logos/logo_Queen.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
         componentes: 'Freddie Mercury, Brian May, Roger Tylor, John Deacon'
     },
     {
@@ -40,7 +36,7 @@ export const rockData: Grupo[] = [
         info: 'MIERDA!',
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_DeepPurple.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
         componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
     },
     {
@@ -48,7 +44,7 @@ export const rockData: Grupo[] = [
         info: 'MIERDA!',
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_Kiss.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
         componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
     },
     {
@@ -56,7 +52,7 @@ export const rockData: Grupo[] = [
         info: 'MIERDA!',
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_LedZeppelin.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
         componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
     },
     {
@@ -64,7 +60,7 @@ export const rockData: Grupo[] = [
         info: 'MIERDA!',
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_Rollings.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
         componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
     },
     {
@@ -72,7 +68,7 @@ export const rockData: Grupo[] = [
         info: 'MIERDA!',
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_Ramones.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
         componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
     },
     {
@@ -80,7 +76,7 @@ export const rockData: Grupo[] = [
         info: 'MIERDA!',
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_PinkFloyd.png',
-        cancion: 'assets/logDa.png',
+        cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
         componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
     }
 

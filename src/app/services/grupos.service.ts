@@ -22,7 +22,12 @@ export class GruposService {
 
   }
 
-  addGrupo(){
+  addGrupo(grupo: Grupo){
+    this.data.push(grupo);
+
+  }
+  delGrupo(index){
+    this.data.slice(index, 1);
 
   }
 }

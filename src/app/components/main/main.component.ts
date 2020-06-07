@@ -15,10 +15,11 @@ import { Router } from '@angular/router';
 export class MainComponent implements OnInit {
 
   grupoData: Grupo [];
+  grupoFiltro: Grupo [];
   // grupoD: Grupo [];
 
   constructor( private grupoService: GruposService,
-              private router: Router ) { }
+               private router: Router ) { }
 
   ngOnInit(): void {
 
@@ -28,6 +29,13 @@ export class MainComponent implements OnInit {
 
   cargaInfo(index: number){
     this.router.navigate([`details/${index}`]);
+  }
+
+  buscarGrupo(e){
+    console.log(e.target.value);
+    console.log(e.target);
+  // this.grupoFiltro = [];
+
   }
 
 }
