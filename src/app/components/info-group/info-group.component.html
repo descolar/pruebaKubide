@@ -1,10 +1,5 @@
-<h2 class="titulo">Más info sobre...</h2>
+<h2 class="titulo">{{grupoSelecc.nombre}}</h2>
 <hr>
-
-<div class="row">
-    <h2>{{grupoSelecc.nombre}}</h2>
-    <hr>
-</div>
 
 <div class="row">
     <div class="col-md-12">
@@ -20,21 +15,21 @@
         <h5>Componentes:</h5>
         <ul></ul>
         <li *ngFor="let compo of componentes; let i = index">
-            <img src="assets/img/logDa.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:30px;"> , {{compo.nombre}} </li>
+            <img [src]="(compo.urlFoto)" class="mr-3 mt-3 rounded-circle imagen-artista"><a [href]="(compo.urlWiki)" target="_blank">{{compo.nombre}}</a> </li>
     </div>
-    <div class="col-md-9 ">
-        <p> {{grupoSelecc.info}}</p>
+
+    <div class="col-md-9 info-text">
+        <br>
+        <p class="font-parrafo"> {{grupoSelecc.info}}</p>
     </div>
 </div>
 
 <br>
 
 <div class="row ">
-    <div class="embed-responsive embed-responsive-21by9 ">
+    <div class="embed-responsive embed-responsive-21by9">
         <iframe width="560 " height="315 " [src]="getVideoUrl(grupoSelecc.cancion) " frameborder="0 " allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
     </div>
 </div>
 
-<div class="row ">
-    <button type="button " class="btn btn-danger btn-block " (click)=eliminarGrupo()><i class="fa fa-trash fa-sm "> </i> Eliminar</button>
-</div>
+<br>

@@ -39,11 +39,11 @@ export class InfoGroupComponent implements OnInit {
 }
 
   eliminarGrupo(){
-    // TODO elimnar grupo del array
 
 }
 
   compo2Array(){
+    // El objeto lo pasamos a array
     this.componentes = this.grupoSelecc.componentes;
   }
 

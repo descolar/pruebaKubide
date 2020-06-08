@@ -26,8 +26,11 @@ export class MainComponent implements OnInit {
     this.router.navigate([`details/${index}`]);
   }
 
-  buscarGrupo(e){
+  buscarGrupo(e: string){
     // TODO buscar grupo
   }
 
+  delGroup(index: number){
+    this.grupoService.delGrupo(index);
+  }
 }

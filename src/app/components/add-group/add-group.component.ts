@@ -78,7 +78,7 @@ export class AddGroupComponent implements OnInit {
     this.nuevoGrupo.img = this.formulario.value.img;
     this.nuevoGrupo.componentes = this.artistas;
 
-    // TODO añadir grupo
+    // TODO añadir grupo y Validaciones
   }
 
   limpiarValores() {
@@ -97,6 +97,8 @@ export class AddGroupComponent implements OnInit {
     };
     this.artistas.push(artista);
     this.limpiarValores();
+
+    // TODO validaciones
   }
 
   delArtista(i: number){

@@ -15,7 +15,7 @@ export class GruposService {
     return this.data;
   }
 
-  getGrupo(index){
+  getGrupo(index: number){
     return this.data[index];
   }
 
@@ -23,8 +23,8 @@ export class GruposService {
     this.data.push(grupo);
   }
 
-  delGrupo(index){
-    this.data.slice(index, 1);
-  }
+  delGrupo(index: number){
+    this.data.splice(index, 1);
+    }
 
 }
