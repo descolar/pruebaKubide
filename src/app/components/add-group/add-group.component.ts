@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Grupo } from 'src/app/interfaces/grupo.interface';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, RequiredValidator } from '@angular/forms';
 import { GruposService } from '../../services/grupos.service';
+import { Subscription } from 'rxjs';
 
 interface Artista {
   nombre: string;
@@ -31,7 +32,7 @@ export class AddGroupComponent implements OnInit {
   public urlWiki: string;
   public urlNombre: string;
   public nombre: string;
-  nuevoGrupo: Grupo = {
+    nuevoGrupo: Grupo = {
     nombre: '',
     img: '',
     logo: '',
@@ -71,14 +72,18 @@ export class AddGroupComponent implements OnInit {
   }
 
   addGrupo(){
+    console.log('artistas' , this.artistas);
     this.nuevoGrupo.nombre = this.formulario.value.nombre;
     this.nuevoGrupo.info = this.formulario.value.info;
-    this.nuevoGrupo.logo = this.formulario.value.logo;
+    this.nuevoGrupo.logo = 'assets/img/sin_imagen.png';
     this.nuevoGrupo.cancion = this.formulario.value.cancion;
-    this.nuevoGrupo.img = this.formulario.value.img;
-    this.nuevoGrupo.componentes = this.artistas;
-
-    // TODO añadir grupo y Validaciones
+    this.nuevoGrupo.img = 'assets/img/sin_imagen.png';
+    this.nuevoGrupo.componentes.splice(0.1);
+    // tslint:disable-next-line:prefer-for-of
+    for ( let a = 0; a < this.artistas.length; a++){
+      this.nuevoGrupo.componentes.push(this.artistas[a]);
+    }
+    // Datos Input
   }
 
   limpiarValores() {
@@ -105,4 +110,14 @@ export class AddGroupComponent implements OnInit {
     this.artistas.splice(i, 1);
   }
 
+  seleccionImagen(path){
+    // TODO
+  }
+  seleccionLogo(path){
+    // TODO
+  }
+
+  acortarCadena(cadena: string){
+    return cadena.substr(0,10);
+  }
 }

@@ -14,9 +14,13 @@ export class MainComponent implements OnInit {
 
   grupoData: Grupo [];
   grupoFiltro: Grupo [];
+  filtrar: boolean;
 
   constructor( private grupoService: GruposService,
-               private router: Router ) { }
+               private router: Router
+               ) {
+
+               }
 
   ngOnInit(): void {
     this.grupoData = this.grupoService.getGrupos();
@@ -26,8 +30,9 @@ export class MainComponent implements OnInit {
     this.router.navigate([`details/${index}`]);
   }
 
-  buscarGrupo(e: string){
-    // TODO buscar grupo
+  buscarGrupo(){
+
+ 
   }
 
   delGroup(index: number){

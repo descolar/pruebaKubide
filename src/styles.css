@@ -86,3 +86,7 @@ footer {
 .font-parrafo {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.flex {
+    display: flexbox;
+}

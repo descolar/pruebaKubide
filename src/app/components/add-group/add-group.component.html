@@ -36,7 +36,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label><strong>Imagen:</strong></label>
-                                <input type="file" class="custom-file-input" formControlName="logo" id="logoFile">
+                                <input type="file" class="custom-file-input" formControlName="logo" id="logoFile" (change)="seleccionImagen($event.target.files)">
                                 <label class="custom-file-label up" for="logoFile">Selecciona imagen del grupo</label>
                             </div>
                         </div>
@@ -93,10 +93,10 @@
                             <tr>
                                 <tr *ngFor="let art of artistas; let i = index">
                                     <td>{{art.nombre}}</td>
-                                    <td>{{art.urlWiki}}</td>
-                                    <td>{{art.urlFoto}}</td>
+                                    <td data-placement="top" title={{art.urlWiki}}>{{acortarCadena(art.urlWiki)}}</td>
+                                    <td data-placement="top" title={{art.urlFoto}}>{{acortarCadena(art.urlFoto)}}</td>
                                     <td>
-                                        <button type="button" class="btn btn-danger btn-sm" (click)="delArtista(i)"><i class="fa fa-trash fa-sm "> </i> Eliminar</button>
+                                        <button type="button" class="btn btn-danger btn-sm" (click)="delArtista(i)"><i class="fa fa-trash fa-sm "> </i></button>
                                     </td>
                                 </tr>
 

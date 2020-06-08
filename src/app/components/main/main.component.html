@@ -7,10 +7,10 @@
             <button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/add']"><i class="fa fa-plus fa-lg"></i> Nuevo</button>
         </div>
         <div class="col-4">
-            <form class="form-inline ">
+            <form class="form-inline">
                 <input type="text" class="form-control form-control-sm" placeholder="Buscar Grupo" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-primary btn-sm" type="button" id="buscar" (click)="buscarGrupo($event)"><i class="fa fa-search fa-sm "></i> Buscar</button>
+                    <button class="btn btn-outline-primary btn-sm" type="button" id="buscar" (click)="buscarGrupo()"><i class="fa fa-search fa-sm "></i> Buscar</button>
                 </div>
             </form>
         </div>
@@ -19,9 +19,9 @@
 
 <br>
 
-<div class="card-columns">
-    <div class="card" *ngFor=" let grupo of grupoData; let i =index">
-        <div class="card-block del-group del-icon">
+<div class="card-columns flex">
+    <div class="card shadow " *ngFor=" let grupo of grupoData; let i =index">
+        <div class="card-block del-group del-icon ">
 
             <button type="button" class="btn btn-outline " (click)=delGroup(i)><i class="fa fa-trash fa-sm del-icon "> </i></button>
         </div>
