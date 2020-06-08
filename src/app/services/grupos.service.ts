@@ -12,22 +12,19 @@ export class GruposService {
   }
 
   getGrupos(){
-
     return this.data;
-
   }
+
   getGrupo(index){
-
     return this.data[index];
-
   }
 
   addGrupo(grupo: Grupo){
     this.data.push(grupo);
-
   }
+
   delGrupo(index){
     this.data.slice(index, 1);
-
   }
+
 }

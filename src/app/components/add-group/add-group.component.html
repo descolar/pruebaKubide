@@ -1,2 +1,111 @@
-<h1>Página para añadir grupo</h1>
-<br>
+<h2 class="cabecera">Añadir nuevo grupo</h2>
+<hr>
+<form autocomplete="off" [formGroup]="formulario" role="form" (ngSubmit)="addGrupo()">
+
+    <div class="card card-form">
+        <div class="card-body">
+            <div class="row">
+
+
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label><strong>Nombre grupo:</strong></label>
+                                <input type="text" formControlName="nombre" name="nombre" class="form-control" placeholder="Nombre del grupo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label><strong>Informacion:</strong></label>
+                                <textarea class="form-control" formControlName="info" placeholder="Información del grupo"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label><strong>URL Canción:</strong></label>
+                                <input type="text" formControlName="cancion" name="cancion" class="form-control" placeholder="Url Canción">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label><strong>Imagen:</strong></label>
+                                <input type="file" class="custom-file-input" formControlName="logo" id="logoFile">
+                                <label class="custom-file-label up" for="logoFile">Selecciona imagen del grupo</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label><strong>Logo:</strong></label>
+                                <input type="file" class="custom-file-input " formControlName="img" id="imgFile">
+                                <label class="custom-file-label up" for="logoFile">Selecciona logo</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label><strong>Nombre artista</strong></label>
+                                <input type="text" formControlName="nombreArtista" name="nombreArtista" class="form-control" placeholder="Nombre artista">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label><strong>Url Wiki del Artista</strong></label>
+                                <input type="text" formControlName="urlWiki" name="urlWiki" class="form-control" placeholder="Wiki artista" autocomplete="off">
+
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label><strong>Url foto del artista</strong></label>
+                                <input type="text" formControlName="urlFoto" name="urlFoto" class="form-control" placeholder="Url foto artista" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+
+                    </div>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary btn-sm btn-block up1" (click)="addArtista()">Añadir</button>
+                    </div>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Url foto</th>
+                                <th scope="col">Url wiki</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <tr *ngFor="let art of artistas; let i = index">
+                                    <td>{{art.nombre}}</td>
+                                    <td>{{art.urlWiki}}</td>
+                                    <td>{{art.urlFoto}}</td>
+                                    <td>
+                                        <button type="button" class="btn btn-danger btn-sm" (click)="delArtista(i)">Eliminar</button>
+                                    </td>
+                                </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-info btn-block">Guardar</button>
+    </div>
+
+</form>

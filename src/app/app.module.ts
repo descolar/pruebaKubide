@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 // Rutas
 import { APP_ROUTING } from './app.routes';
 
@@ -26,7 +28,9 @@ import { FooterComponent } from './components/share/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    APP_ROUTING
+    APP_ROUTING,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     GruposService

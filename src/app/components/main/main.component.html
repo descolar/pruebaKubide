@@ -4,29 +4,29 @@
 <div class="container">
     <div class="row justify-content-between">
         <div class="col-4">
-            <button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/add']">Nuevo</button>
+            <button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/add']"><i class="fa fa-plus fa-lg"></i> Nuevo</button>
         </div>
         <div class="col-4">
             <form class="form-inline ">
-                <input class="form-control form-control-sm" type="text" placeholder="Buscar Grupo">
-                <button class="btn btn-outline-success btn-sm" name="textBuscar" (click)="buscarGrupo($event)">Buscar</button>
+                <input type="text" class="form-control form-control-sm" placeholder="Buscar Grupo" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-primary btn-sm" type="button" id="buscar" (click)="buscarGrupo($event)">Button</button>
+                </div>
             </form>
         </div>
     </div>
 </div>
 
 <br>
-<!-- Cargamos los datos en cards -->
-<div class="card-columns">
 
+<div class="card-columns">
     <div class="card" *ngFor=" let grupo of grupoData; let i =index">
         <div class="embed-responsive embed-responsive-21by9">
             <img alt="Card image cap" class="card-img-top embed-responsive-item imagen" [src]="grupo.logo" />
         </div>
         <div class="card-block">
             <h4 class="card-title">{{grupo.nombre}}</h4>
-            <button type="button" class="btn btn-outline-success btn-block" (click)=cargaInfo(i)>Saber más</button>
+            <button type="button" class="btn btn-outline-info btn-block" (click)=cargaInfo(i)>Detalles...</button>
         </div>
     </div>
-
 </div>

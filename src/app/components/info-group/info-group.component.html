@@ -1,27 +1,40 @@
 <h2 class="titulo">Más info sobre...</h2>
 <hr>
+
+<div class="row">
+    <h2>{{grupoSelecc.nombre}}</h2>
+    <hr>
+</div>
+
 <div class="row">
     <div class="col-md-12">
-        <img [src]="grupoSelecc.logo" class="img-fluid imagen_info" alt="Responsive image">
+        <img [src]="grupoSelecc.img" class="img-fluid imagen_info" alt="Responsive image">
     </div>
 </div>
+
 <br>
 
 <div class="row">
-    <div class="col-md-12">
-        <h2>{{grupoSelecc.nombre}}</h2>
-        <hr>
+    <div class="col-md-3">
+
+        <h5>Componentes:</h5>
+        <ul></ul>
+        <li *ngFor="let compo of componentes; let i = index">
+            <img src="assets/img/logDa.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:30px;"> , {{compo.nombre}} </li>
+    </div>
+    <div class="col-md-9 ">
         <p> {{grupoSelecc.info}}</p>
-        <h2 class="cabecera">Comoponentes: {{grupoSelecc.componentes}}</h2>
     </div>
 </div>
-<!-- <div class="row">
 
-    <div class="embed-responsive embed-responsive-21by9">
-        <iframe class="embed-responsive-item" [src]="cancion" allowfullscreen></iframe>
+<br>
+
+<div class="row ">
+    <div class="embed-responsive embed-responsive-21by9 ">
+        <iframe width="560 " height="315 " [src]="getVideoUrl(grupoSelecc.cancion) " frameborder="0 " allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture " allowfullscreen></iframe>
     </div>
+</div>
 
-</div> -->
-<div class="row">
-    <button type="button" class="btn btn-danger btn-block" (click)=eliminarGrupo()>Eliminar</button>
+<div class="row ">
+    <button type="button " class="btn btn-danger btn-block " (click)=eliminarGrupo()><i class="fa fa-trash fa-sm "> </i> Eliminar</button>
 </div>

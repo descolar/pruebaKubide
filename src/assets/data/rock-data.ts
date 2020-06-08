@@ -4,24 +4,33 @@ import { Grupo } from '../../app/interfaces/grupo.interface';
 export const rockData: Grupo[] = [
     {
         nombre: 'ACDC',
-        info: 'AC/DC es un grupo de hard rock australiano formado en 1973 en Sídney, Australia, ' +
-        'por los hermanos escoceses Malcolm y Angus Young.Sus álbumes se han vendido en un total ' +
-        'estimado de 200 millones de copias,5​6​ embarcándose en giras multitudinarias por todo el ' +
-        'mundo, y sus éxitos han musicalizado varias producciones cinematográficas sobresalientes. ' +
-        'Son famosas sus actuaciones en vivo, resultando vibrantes y exultantes espectáculos de primer ' +
-        'orden.11​ Mucho de ello se debe al extravagante estilo de su guitarrista principal y símbolo visual, ' +
-        'Angus Young, quien asume el rol de agitador musical durante los conciertos, gracias a sus dinámicos ' +
-        'y adrenalínicos despliegues escénicos uniformado de colegial callejero.12​ Al comienzo, los ' +
-        'circuitos de pubs australianos fueron testigo de los primeros meses de vida del proyecto, tiempos ' +
-        'por los cuales sufrieron diversos cambios en su alineación.13​14​ En 1974, la llegada del cantante ' +
-        'Bon Scott, se convertiría en pieza clave del éxito del grupo. Su presencia en escena, junto a los ' +
-        'hermanos Young, lo convirtió en uno de los personajes más carismáticos de la historia del rock. ' +
-        'La formación se estabilizaría con Mark Evans (bajo) y Phil Rudd (batería).',
-        img: 'assets/logDa.png',
+        info: `Queen es una banda británica de rock formada en 1970 en Londres por el cantante Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon.Si bien el grupo ha presentado bajas de dos de sus miembros (Mercury, fallecido en 1991, y Deacon, retirado en 1997), los integrantes restantes, May y Taylor, continúan trabajando bajo el nombre Queen, por lo que la banda aún se considera activa.`,
+        img: 'assets/img/grupo/grupo_AcDc.jpg',
         logo: 'assets/img/logos/logo_AcDc.png',
-        cancion: 'https://www.youtube.com/embed/gEPmA3USJdI?list=RDgEPmA3USJdI',
-        componentes: ' Phil Rudd,  Cliff Williams, Brian Johnson, Angus Young, Malcolm Young'
+        cancion: 'https://www.youtube.com/embed/tpzkSg9e3Uw',
+        componentes:  [
+            {
+               nombre: 'Angus Young',
+               urlWiki: 'https://es.wikipedia.org/wiki/Angus_Young',
+               urlFoto: 'https://es.wikipedia.org/wiki/Angus_Young#/media/Archivo:AngusYoung.JPG'
 
+            },
+            {
+                nombre: 'Brian Johnson',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_Johnson',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_Johnson#/media/Archivo:Brian_Johnson.jpg'
+            },
+            {
+                nombre: 'Stevie Young',
+                urlWiki: 'https://es.wikipedia.org/wiki/Stevie_Young',
+                urlFoto: 'https://es.wikipedia.org/wiki/Stevie_Young#/media/Archivo:Stevie_Young_with_ACDC_Tacoma_WA_Feb_2_2016.jpg'
+            },
+            {
+                nombre: 'Phil Rudd',
+                urlWiki: 'https://es.wikipedia.org/wiki/Phil_Rudd',
+                urlFoto: 'https://es.wikipedia.org/wiki/Phil_Rudd#/media/Archivo:PhilRudd.JPG'
+            }
+        ]
     },
     {
         nombre: 'Queen',
@@ -29,7 +38,29 @@ export const rockData: Grupo[] = [
         img: 'assets/grupo_logDa.png',
         logo: 'assets/img/logos/logo_Queen.png',
         cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
-        componentes: 'Freddie Mercury, Brian May, Roger Tylor, John Deacon'
+        componentes:  [
+            {
+               nombre: 'Freddie Mercury',
+               urlWiki: 'https://es.wikipedia.org/wiki/Freddie_Mercury',
+               urlFoto: 'https://es.wikipedia.org/wiki/Freddie_Mercury#/media/Archivo:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg'
+
+            },
+            {
+                nombre: 'Brian May',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_May',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_May#/media/Archivo:Brian_May_(NHQ201812310024)_(cropped).jpg'
+            },
+            {
+                nombre: 'Roger Tylor',
+                urlWiki: 'https://es.wikipedia.org/wiki/Roger_Taylor',
+                urlFoto: 'https://es.wikipedia.org/wiki/Roger_Taylor#/media/Archivo:Queen_And_Adam_Lambert_-_The_O2_-_Tuesday_12th_December_2017_QueenO2121217-47_(39066610085)_Cropped.jpg'
+            },
+            {
+                nombre: 'John Deacon',
+                urlWiki: 'https://es.wikipedia.org/wiki/John_Deacon',
+                urlFoto: 'https://es.wikipedia.org/wiki/John_Deacon#/media/Archivo:Bass_player_queen.jpg'
+            }
+        ]
     },
     {
         nombre: 'DeepPurple',
@@ -37,7 +68,29 @@ export const rockData: Grupo[] = [
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_DeepPurple.png',
         cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
-        componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
+        componentes:  [
+            {
+               nombre: 'Freddie Mercury',
+               urlWiki: 'https://es.wikipedia.org/wiki/Freddie_Mercury',
+               urlFoto: 'https://es.wikipedia.org/wiki/Freddie_Mercury#/media/Archivo:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg'
+
+            },
+            {
+                nombre: 'Brian May',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_May',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_May#/media/Archivo:Brian_May_(NHQ201812310024)_(cropped).jpg'
+            },
+            {
+                nombre: 'Roger Tylor',
+                urlWiki: 'https://es.wikipedia.org/wiki/Roger_Taylor',
+                urlFoto: 'https://es.wikipedia.org/wiki/Roger_Taylor#/media/Archivo:Queen_And_Adam_Lambert_-_The_O2_-_Tuesday_12th_December_2017_QueenO2121217-47_(39066610085)_Cropped.jpg'
+            },
+            {
+                nombre: 'John Deacon',
+                urlWiki: 'https://es.wikipedia.org/wiki/John_Deacon',
+                urlFoto: 'https://es.wikipedia.org/wiki/John_Deacon#/media/Archivo:Bass_player_queen.jpg'
+            }
+        ]
     },
     {
         nombre: 'Kiss',
@@ -45,7 +98,29 @@ export const rockData: Grupo[] = [
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_Kiss.png',
         cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
-        componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
+        componentes:  [
+            {
+               nombre: 'Freddie Mercury',
+               urlWiki: 'https://es.wikipedia.org/wiki/Freddie_Mercury',
+               urlFoto: 'https://es.wikipedia.org/wiki/Freddie_Mercury#/media/Archivo:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg'
+
+            },
+            {
+                nombre: 'Brian May',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_May',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_May#/media/Archivo:Brian_May_(NHQ201812310024)_(cropped).jpg'
+            },
+            {
+                nombre: 'Roger Tylor',
+                urlWiki: 'https://es.wikipedia.org/wiki/Roger_Taylor',
+                urlFoto: 'https://es.wikipedia.org/wiki/Roger_Taylor#/media/Archivo:Queen_And_Adam_Lambert_-_The_O2_-_Tuesday_12th_December_2017_QueenO2121217-47_(39066610085)_Cropped.jpg'
+            },
+            {
+                nombre: 'John Deacon',
+                urlWiki: 'https://es.wikipedia.org/wiki/John_Deacon',
+                urlFoto: 'https://es.wikipedia.org/wiki/John_Deacon#/media/Archivo:Bass_player_queen.jpg'
+            }
+        ]
     },
     {
         nombre: 'LedZeppeling',
@@ -53,7 +128,29 @@ export const rockData: Grupo[] = [
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_LedZeppelin.png',
         cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
-        componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
+        componentes:  [
+            {
+               nombre: 'Freddie Mercury',
+               urlWiki: 'https://es.wikipedia.org/wiki/Freddie_Mercury',
+               urlFoto: 'https://es.wikipedia.org/wiki/Freddie_Mercury#/media/Archivo:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg'
+
+            },
+            {
+                nombre: 'Brian May',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_May',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_May#/media/Archivo:Brian_May_(NHQ201812310024)_(cropped).jpg'
+            },
+            {
+                nombre: 'Roger Tylor',
+                urlWiki: 'https://es.wikipedia.org/wiki/Roger_Taylor',
+                urlFoto: 'https://es.wikipedia.org/wiki/Roger_Taylor#/media/Archivo:Queen_And_Adam_Lambert_-_The_O2_-_Tuesday_12th_December_2017_QueenO2121217-47_(39066610085)_Cropped.jpg'
+            },
+            {
+                nombre: 'John Deacon',
+                urlWiki: 'https://es.wikipedia.org/wiki/John_Deacon',
+                urlFoto: 'https://es.wikipedia.org/wiki/John_Deacon#/media/Archivo:Bass_player_queen.jpg'
+            }
+        ]
     },
     {
         nombre: 'The Rollings Stone',
@@ -61,7 +158,29 @@ export const rockData: Grupo[] = [
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_Rollings.png',
         cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
-        componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
+        componentes:  [
+            {
+               nombre: 'Freddie Mercury',
+               urlWiki: 'https://es.wikipedia.org/wiki/Freddie_Mercury',
+               urlFoto: 'https://es.wikipedia.org/wiki/Freddie_Mercury#/media/Archivo:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg'
+
+            },
+            {
+                nombre: 'Brian May',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_May',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_May#/media/Archivo:Brian_May_(NHQ201812310024)_(cropped).jpg'
+            },
+            {
+                nombre: 'Roger Tylor',
+                urlWiki: 'https://es.wikipedia.org/wiki/Roger_Taylor',
+                urlFoto: 'https://es.wikipedia.org/wiki/Roger_Taylor#/media/Archivo:Queen_And_Adam_Lambert_-_The_O2_-_Tuesday_12th_December_2017_QueenO2121217-47_(39066610085)_Cropped.jpg'
+            },
+            {
+                nombre: 'John Deacon',
+                urlWiki: 'https://es.wikipedia.org/wiki/John_Deacon',
+                urlFoto: 'https://es.wikipedia.org/wiki/John_Deacon#/media/Archivo:Bass_player_queen.jpg'
+            }
+        ]
     },
     {
         nombre: 'The Ramones',
@@ -69,7 +188,29 @@ export const rockData: Grupo[] = [
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_Ramones.png',
         cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
-        componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
+        componentes:  [
+            {
+               nombre: 'Freddie Mercury',
+               urlWiki: 'https://es.wikipedia.org/wiki/Freddie_Mercury',
+               urlFoto: 'https://es.wikipedia.org/wiki/Freddie_Mercury#/media/Archivo:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg'
+
+            },
+            {
+                nombre: 'Brian May',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_May',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_May#/media/Archivo:Brian_May_(NHQ201812310024)_(cropped).jpg'
+            },
+            {
+                nombre: 'Roger Tylor',
+                urlWiki: 'https://es.wikipedia.org/wiki/Roger_Taylor',
+                urlFoto: 'https://es.wikipedia.org/wiki/Roger_Taylor#/media/Archivo:Queen_And_Adam_Lambert_-_The_O2_-_Tuesday_12th_December_2017_QueenO2121217-47_(39066610085)_Cropped.jpg'
+            },
+            {
+                nombre: 'John Deacon',
+                urlWiki: 'https://es.wikipedia.org/wiki/John_Deacon',
+                urlFoto: 'https://es.wikipedia.org/wiki/John_Deacon#/media/Archivo:Bass_player_queen.jpg'
+            }
+        ]
     },
     {
         nombre: 'Pink Floyd',
@@ -77,7 +218,29 @@ export const rockData: Grupo[] = [
         img: 'assets/logDa.png',
         logo: 'assets/img/logos/logo_PinkFloyd.png',
         cancion: 'https://www.youtube.com/embed/CjWQZBmJf6M?list=RDCjWQZBmJf6M',
-        componentes: 'Ian Paice, Roger Glover, Ian Gillan, Steve Morse, Don Airey'
+        componentes:  [
+            {
+               nombre: 'Freddie Mercury',
+               urlWiki: 'https://es.wikipedia.org/wiki/Freddie_Mercury',
+               urlFoto: 'https://es.wikipedia.org/wiki/Freddie_Mercury#/media/Archivo:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg'
+
+            },
+            {
+                nombre: 'Brian May',
+                urlWiki: 'https://es.wikipedia.org/wiki/Brian_May',
+                urlFoto: 'https://es.wikipedia.org/wiki/Brian_May#/media/Archivo:Brian_May_(NHQ201812310024)_(cropped).jpg'
+            },
+            {
+                nombre: 'Roger Tylor',
+                urlWiki: 'https://es.wikipedia.org/wiki/Roger_Taylor',
+                urlFoto: 'https://es.wikipedia.org/wiki/Roger_Taylor#/media/Archivo:Queen_And_Adam_Lambert_-_The_O2_-_Tuesday_12th_December_2017_QueenO2121217-47_(39066610085)_Cropped.jpg'
+            },
+            {
+                nombre: 'John Deacon',
+                urlWiki: 'https://es.wikipedia.org/wiki/John_Deacon',
+                urlFoto: 'https://es.wikipedia.org/wiki/John_Deacon#/media/Archivo:Bass_player_queen.jpg'
+            }
+        ]
     }
 
 ];

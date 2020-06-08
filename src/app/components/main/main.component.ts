@@ -4,8 +4,6 @@ import { Grupo } from '../../interfaces/grupo.interface';
 import { Router } from '@angular/router';
 
 
-
-
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -16,15 +14,12 @@ export class MainComponent implements OnInit {
 
   grupoData: Grupo [];
   grupoFiltro: Grupo [];
-  // grupoD: Grupo [];
 
   constructor( private grupoService: GruposService,
                private router: Router ) { }
 
   ngOnInit(): void {
-
     this.grupoData = this.grupoService.getGrupos();
-
   }
 
   cargaInfo(index: number){
@@ -32,10 +27,7 @@ export class MainComponent implements OnInit {
   }
 
   buscarGrupo(e){
-    console.log(e.target.value);
-    console.log(e.target);
-  // this.grupoFiltro = [];
-
+    // TODO buscar grupo
   }
 
 }
