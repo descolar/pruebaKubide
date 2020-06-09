@@ -30,21 +30,27 @@ export class MainComponent implements OnInit {
     this.crearFormulario();
   }
 
-  cargaInfo(index: number){
+  cargaInfo(index: number) {
     this.router.navigate([`details/${index}`]);
   }
 
-  buscarGrupo(){
-
+  buscarGrupo() {
+    this.filtrar = true;
     let text = this.formulario.value.txtBuscar;
     text = text.toLowerCase();
-    this.grupoService.searchGrupo(text);
+    this.grupoData = this.grupoService.searchGrupo(text);
   }
 
-  delGroup(index: number){
+  quitarFiltro() {
+    this.filtrar = false;
+    this.grupoData = this.grupoService.getGrupos();
+  }
+
+  delGroup(index: number) {
     this.grupoService.delGrupo(index);
   }
-  crearFormulario(){
+
+  crearFormulario() {
     this.formulario = this.fb.group({
       txtBuscar: [''],
     });

@@ -36,7 +36,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label><strong>Imagen:</strong></label>
-                                <input type="file" class="custom-file-input" formControlName="logo" id="logoFile" (change)="seleccionImagen($event.target.files)">
+                                <input type="file" class="custom-file-input" formControlName="logo" id="logoFile" (change)="seleccionImagen($event)" disabled>
                                 <label class="custom-file-label up" for="logoFile">Selecciona imagen del grupo</label>
                             </div>
                         </div>
@@ -45,7 +45,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label><strong>Logo:</strong></label>
-                                <input type="file" class="custom-file-input " formControlName="img" id="imgFile">
+                                <input type="file" class="custom-file-input " formControlName="img" id="imgFile" disabled>
                                 <label class="custom-file-label up" for="logoFile">Selecciona logo</label>
                             </div>
                         </div>
@@ -107,5 +107,4 @@
         </div>
         <button type="submit" class="btn btn-info btn-block"><i class="fa fa-save"></i>  Guardar</button>
     </div>
-
 </form>

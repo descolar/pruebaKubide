@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Grupo } from 'src/app/interfaces/grupo.interface';
 import { FormGroup, FormBuilder, RequiredValidator } from '@angular/forms';
 import { GruposService } from '../../services/grupos.service';
-import { Subscription } from 'rxjs';
+
 
 interface Artista {
   nombre: string;
@@ -83,7 +83,7 @@ export class AddGroupComponent implements OnInit {
     for ( let a = 0; a < this.artistas.length; a++){
       this.nuevoGrupo.componentes.push(this.artistas[a]);
     }
-    // Datos Input
+    // TODO Datos Imagen
   }
 
   limpiarValores() {
@@ -102,22 +102,30 @@ export class AddGroupComponent implements OnInit {
     };
     this.artistas.push(artista);
     this.limpiarValores();
-
-    // TODO validaciones
   }
 
   delArtista(i: number){
     this.artistas.splice(i, 1);
   }
 
-  seleccionImagen(path){
-    // TODO
+  seleccionImagen( archivo: any){
+
+    const reader = new FileReader() ;
+
+    reader.onload = ( archivo: any ) => {
+      const url = archivo.target.result;
+      console.log('redaer' , reader);
+      };
+
+    const or = reader.readAsDataURL( archivo.target.files[0] );
+    console.log(or);
   }
+
   seleccionLogo(path){
     // TODO
   }
 
   acortarCadena(cadena: string){
-    return cadena.substr(0,10);
+    return cadena.substr(0, 10);
   }
 }

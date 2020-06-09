@@ -30,8 +30,9 @@ export class GruposService {
 
   searchGrupo(texto: string){
 
-    const h: number = this.data.indexOf(this.data.find(x => x.nombre.toLocaleLowerCase() === texto));
-    this.data2.push(this.data[h]);
+    return this.data.filter( ( dato ) =>
+      dato.nombre.toLowerCase() === texto.toLowerCase()
+    );
 
   }
 
