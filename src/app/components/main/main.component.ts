@@ -35,15 +35,25 @@ export class MainComponent implements OnInit {
   }
 
   buscarGrupo() {
-    this.filtrar = true;
     let text = this.formulario.value.txtBuscar;
     text = text.toLowerCase();
-    this.grupoData = this.grupoService.searchGrupo( text );
+    if (this.filtrar){
+      this.grupoData = this.grupoService.getGrupos();
+      this.grupoData = this.grupoService.searchGrupo( text );
+    }else{
+      this.filtrar = true;
+      this.grupoData = this.grupoService.searchGrupo( text );
+
+    }
+
   }
 
   quitarFiltro() {
     this.filtrar = false;
     this.grupoData = this.grupoService.getGrupos();
+    this.formulario.setValue({
+      txtBuscar: ''
+    });
   }
 
   delGroup( index: number ) {
