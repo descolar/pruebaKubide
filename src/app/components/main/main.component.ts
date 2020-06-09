@@ -43,9 +43,7 @@ export class MainComponent implements OnInit {
     }else{
       this.filtrar = true;
       this.grupoData = this.grupoService.searchGrupo( text );
-
     }
-
   }
 
   quitarFiltro() {
