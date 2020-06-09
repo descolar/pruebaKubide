@@ -90,3 +90,7 @@ footer {
 .flex {
     display: flexbox;
 }
+
+.buton-back {
+    margin: 10px auto;
+}

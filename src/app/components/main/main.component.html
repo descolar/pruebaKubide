@@ -7,8 +7,8 @@
             <button type="button" class="btn btn-outline-primary btn-sm" [routerLink]="['/add']"><i class="fa fa-plus fa-lg"></i> Nuevo</button>
         </div>
         <div class="col-4">
-            <form class="form-inline">
-                <input type="text" class="form-control form-control-sm" placeholder="Buscar Grupo" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <form class="form-inline" [formGroup]="formulario">
+                <input type="text" class="form-control form-control-sm" formControlName="txtBuscar" (ngSubmit)="buscarGrupo()" placeholder="Buscar Grupo" aria-label="Recipient's username" aria-describedby="button-addon2">
                 <div class="input-group-append">
                     <button class="btn btn-outline-primary btn-sm" type="button" id="buscar" (click)="buscarGrupo()"><i class="fa fa-search fa-sm "></i> Buscar</button>
                 </div>

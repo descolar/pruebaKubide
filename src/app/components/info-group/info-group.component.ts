@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { GruposService} from 'src/app/services/grupos.service';
 import { Grupo } from '../../interfaces/grupo.interface';
 import {DomSanitizer} from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -18,10 +19,12 @@ export class InfoGroupComponent implements OnInit {
   grupoSelecc: Grupo; // Para cargar el grupo. Se utiliza en cargaGrupo()
   componentes = [];
   cancion: string; // Prueba para video.Se utiliza en cargaGrupo()
+ 
 
   constructor(  private activatedRouted: ActivatedRoute,
                 private grupoService: GruposService,
-                private sanitizer: DomSanitizer
+                private sanitizer: DomSanitizer,
+                private router: Router
                 ) {
     // Capturamos el index que mandamos por Router
     this.index = this.activatedRouted.snapshot.params.index;
@@ -49,6 +52,10 @@ export class InfoGroupComponent implements OnInit {
 
   getVideoUrl( url: string ){
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  back(){
+    this.router.navigate(['/home']);
   }
 }
 
