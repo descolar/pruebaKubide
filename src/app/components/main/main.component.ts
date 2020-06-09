@@ -38,7 +38,7 @@ export class MainComponent implements OnInit {
     this.filtrar = true;
     let text = this.formulario.value.txtBuscar;
     text = text.toLowerCase();
-    this.grupoData = this.grupoService.searchGrupo(text);
+    this.grupoData = this.grupoService.searchGrupo( text );
   }
 
   quitarFiltro() {
@@ -46,8 +46,8 @@ export class MainComponent implements OnInit {
     this.grupoData = this.grupoService.getGrupos();
   }
 
-  delGroup(index: number) {
-    this.grupoService.delGrupo(index);
+  delGroup( index: number ) {
+    this.grupoService.delGrupo( index );
   }
 
   crearFormulario() {

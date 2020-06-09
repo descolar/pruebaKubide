@@ -12,23 +12,23 @@ export class GruposService {
   constructor() {
   }
 
-  getGrupos(){
+  getGrupos() {
     return this.data;
   }
 
-  getGrupo(index: number){
+  getGrupo(index: number) {
     return this.data[index];
   }
 
-  addGrupo(grupo: Grupo){
+  addGrupo(grupo: Grupo) {
     this.data.push(grupo);
   }
 
-  delGrupo(index: number){
+  delGrupo(index: number) {
     this.data.splice(index, 1);
   }
 
-  searchGrupo(texto: string){
+  searchGrupo(texto: string) {
 
     return this.data.filter( ( dato ) =>
       dato.nombre.toLowerCase() === texto.toLowerCase()

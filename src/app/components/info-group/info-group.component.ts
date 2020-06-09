@@ -35,17 +35,16 @@ export class InfoGroupComponent implements OnInit {
     this.compo2Array();
   }
 
-  cargaGrupo(){
-    // Cargamos el grupo en la variable para utilizarlo en HTML
+  cargaGrupo() {
     this.grupoSelecc = this.grupoService.getGrupo(this.index);
     this.cancion = this.grupoSelecc.cancion;
 }
 
-  eliminarGrupo(){
+  eliminarGrupo() {
 
-}
+  }
 
-  compo2Array(){
+  compo2Array() {
     // El objeto lo pasamos a array
     this.componentes = this.grupoSelecc.componentes;
   }

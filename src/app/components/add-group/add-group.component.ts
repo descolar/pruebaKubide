@@ -3,7 +3,6 @@ import { Grupo } from 'src/app/interfaces/grupo.interface';
 import { FormGroup, FormBuilder, RequiredValidator } from '@angular/forms';
 import { GruposService } from '../../services/grupos.service';
 
-
 interface Artista {
   nombre: string;
   urlWiki: string;
@@ -58,7 +57,7 @@ export class AddGroupComponent implements OnInit {
 
   }
 
-  crearFormulario(){
+  crearFormulario() {
     this.formulario = this.fb.group({
       nombre: [''],
       info: [''],
@@ -71,8 +70,8 @@ export class AddGroupComponent implements OnInit {
     });
   }
 
-  addGrupo(){
-    console.log('artistas' , this.artistas);
+  addGrupo() {
+    console.log( 'artistas' , this.artistas );
     this.nuevoGrupo.nombre = this.formulario.value.nombre;
     this.nuevoGrupo.info = this.formulario.value.info;
     this.nuevoGrupo.logo = 'assets/img/sin_imagen.png';
@@ -83,7 +82,6 @@ export class AddGroupComponent implements OnInit {
     for ( let a = 0; a < this.artistas.length; a++){
       this.nuevoGrupo.componentes.push(this.artistas[a]);
     }
-    // TODO Datos Imagen
   }
 
   limpiarValores() {
@@ -94,7 +92,7 @@ export class AddGroupComponent implements OnInit {
     });
   }
 
-  addArtista(){
+  addArtista() {
     const artista: Artista = {
       nombre: this.formulario.value.nombreArtista,
       urlFoto: this.formulario.value.urlFoto,
@@ -104,11 +102,11 @@ export class AddGroupComponent implements OnInit {
     this.limpiarValores();
   }
 
-  delArtista(i: number){
+  delArtista( i: number ) {
     this.artistas.splice(i, 1);
   }
 
-  seleccionImagen( archivo: any){
+  seleccionImagen( archivo: any ){
 
     const reader = new FileReader() ;
 
@@ -121,11 +119,11 @@ export class AddGroupComponent implements OnInit {
     console.log(or);
   }
 
-  seleccionLogo(path){
-    // TODO
+  seleccionLogo( path ) {
+
   }
 
-  acortarCadena(cadena: string){
+  acortarCadena( cadena: string ) {
     return cadena.substr(0, 10);
   }
 }
